@@ -28,7 +28,7 @@ describe('ContactForm', () => {
       expect(screen.getByRole('textbox', { name: /email/i })).toBeInTheDocument();
       expect(screen.getByRole('textbox', { name: /message/i })).toBeInTheDocument();
       expect(screen.getByRole('checkbox', { name: /subscribe to newsletter/i })).toBeInTheDocument();
-      expect(screen.getByRole('button', { name: /send message/i })).not.toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /send message/i })).toBeInTheDocument();
     });
 
     it('has correct placeholders and labels', () => {
