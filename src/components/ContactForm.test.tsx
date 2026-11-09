@@ -1,5 +1,5 @@
 import ContactForm from './ContactForm';
-import { beforeEach, describe, expect, it, test } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 function fillForm({ name = 'Guybrush', email = 'mighty@pirate.gov', message = 'Hello' } = {}) {

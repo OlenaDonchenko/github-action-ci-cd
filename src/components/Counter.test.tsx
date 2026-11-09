@@ -1,5 +1,5 @@
 import Counter from './Counter';
-import { describe, expect, it, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 // render: zeichnet eine Komponente in ein simuliertes DOM (jsdom, siehe vite.config.ts)
 // screen: Zugriff auf dieses DOM – darüber suchen wir Elemente wie ein Nutzer
 // fireEvent: löst Browser-Events (z.B. click) auf einem Element aus
@@ -9,7 +9,7 @@ test('ein erster Test', () => {
   // Arrange/Act
   // render() hängt <Counter /> ins DOM. Den Rückgabewert brauchen wir meist nicht,
   // weil wir über `screen` auf das gerenderte DOM zugreifen.
-  const result = render(<Counter />);
+  render(<Counter />);
   // getByRole sucht nach der Rolle eines Elements (h1–h6 = 'heading') und seinem
   // sichtbaren Namen. So suchen auch Screenreader – der Test prüft also gleich die Barrierefreiheit mit.
   // getBy... wirft einen Fehler, wenn nichts gefunden wird → der Test schlägt sofort fehl.
